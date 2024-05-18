@@ -12,6 +12,10 @@
 		9C4C9E2D2BEF13C300334BA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C9E2C2BEF13C300334BA6 /* ContentView.swift */; };
 		9C4C9E2F2BEF13C500334BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C9E2E2BEF13C500334BA6 /* Assets.xcassets */; };
 		9C4C9E322BEF13C500334BA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C9E312BEF13C500334BA6 /* Preview Assets.xcassets */; };
+		9C87FB252BEF63B40074D432 /* bbjijiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C87FB242BEF63B40074D432 /* bbjijiApp.swift */; };
+		9C87FB272BEF63B40074D432 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C87FB262BEF63B40074D432 /* ContentView.swift */; };
+		9C87FB292BEF63B50074D432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C87FB282BEF63B50074D432 /* Assets.xcassets */; };
+		9C87FB2C2BEF63B50074D432 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C87FB2B2BEF63B50074D432 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +49,25 @@
 		9C4C9E2C2BEF13C300334BA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C4C9E2E2BEF13C500334BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C4C9E312BEF13C500334BA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C7EBA282BF4FC7600541A64 /* Gitness Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gitness Watch App.entitlements"; sourceTree = "<group>"; };
+		9C87FB222BEF63B40074D432 /* bbjiji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbjiji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C87FB242BEF63B40074D432 /* bbjijiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bbjijiApp.swift; sourceTree = "<group>"; };
+		9C87FB262BEF63B40074D432 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C87FB282BEF63B50074D432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C87FB2B2BEF63B50074D432 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C88047C2BEF66D000C1C711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9C88047D2BEF66ED00C1C711 /* Gitness-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Gitness-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9C4C9E222BEF13C300334BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C87FB1F2BEF63B40074D432 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				9C4C9E292BEF13C300334BA6 /* Gitness Watch App */,
+				9C87FB232BEF63B40074D432 /* bbjiji */,
 				9C4C9E202BEF13C300334BA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +91,7 @@
 			children = (
 				9C4C9E1F2BEF13C300334BA6 /* Gitness.app */,
 				9C4C9E252BEF13C300334BA6 /* Gitness Watch App.app */,
+				9C87FB222BEF63B40074D432 /* bbjiji.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +99,8 @@
 		9C4C9E292BEF13C300334BA6 /* Gitness Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9C7EBA282BF4FC7600541A64 /* Gitness Watch App.entitlements */,
+				9C88047D2BEF66ED00C1C711 /* Gitness-Watch-App-Info.plist */,
 				9C4C9E2A2BEF13C300334BA6 /* GitnessApp.swift */,
 				9C4C9E2C2BEF13C300334BA6 /* ContentView.swift */,
 				9C4C9E2E2BEF13C500334BA6 /* Assets.xcassets */,
@@ -90,6 +113,26 @@
 			isa = PBXGroup;
 			children = (
 				9C4C9E312BEF13C500334BA6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C87FB232BEF63B40074D432 /* bbjiji */ = {
+			isa = PBXGroup;
+			children = (
+				9C88047C2BEF66D000C1C711 /* Info.plist */,
+				9C87FB242BEF63B40074D432 /* bbjijiApp.swift */,
+				9C87FB262BEF63B40074D432 /* ContentView.swift */,
+				9C87FB282BEF63B50074D432 /* Assets.xcassets */,
+				9C87FB2A2BEF63B50074D432 /* Preview Content */,
+			);
+			path = bbjiji;
+			sourceTree = "<group>";
+		};
+		9C87FB2A2BEF63B50074D432 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9C87FB2B2BEF63B50074D432 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -131,6 +174,23 @@
 			productReference = 9C4C9E252BEF13C300334BA6 /* Gitness Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9C87FB212BEF63B40074D432 /* bbjiji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C87FB2D2BEF63B50074D432 /* Build configuration list for PBXNativeTarget "bbjiji" */;
+			buildPhases = (
+				9C87FB1E2BEF63B40074D432 /* Sources */,
+				9C87FB1F2BEF63B40074D432 /* Frameworks */,
+				9C87FB202BEF63B40074D432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bbjiji;
+			productName = bbjiji;
+			productReference = 9C87FB222BEF63B40074D432 /* bbjiji.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,14 +198,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					9C4C9E1E2BEF13C300334BA6 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					9C4C9E242BEF13C300334BA6 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					9C87FB212BEF63B40074D432 = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -164,6 +227,7 @@
 			targets = (
 				9C4C9E1E2BEF13C300334BA6 /* Gitness */,
 				9C4C9E242BEF13C300334BA6 /* Gitness Watch App */,
+				9C87FB212BEF63B40074D432 /* bbjiji */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +249,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C87FB202BEF63B40074D432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C87FB2C2BEF63B50074D432 /* Preview Assets.xcassets in Resources */,
+				9C87FB292BEF63B50074D432 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +267,15 @@
 			files = (
 				9C4C9E2D2BEF13C300334BA6 /* ContentView.swift in Sources */,
 				9C4C9E2B2BEF13C300334BA6 /* GitnessApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C87FB1E2BEF63B40074D432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C87FB272BEF63B40074D432 /* ContentView.swift in Sources */,
+				9C87FB252BEF63B40074D432 /* bbjijiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +324,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -303,6 +386,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -327,12 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Gitness Watch App/Gitness Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitness Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = DRV33GLHHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gitness-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Gitness;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -357,12 +443,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Gitness Watch App/Gitness Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitness Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = DRV33GLHHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Gitness-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Gitness;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -416,6 +504,71 @@
 			};
 			name = Release;
 		};
+		9C87FB2E2BEF63B50074D432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bbjiji/Preview Content\"";
+				DEVELOPMENT_TEAM = DRV33GLHHU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bbjiji/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kiwi.bbjiji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C87FB2F2BEF63B50074D432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"bbjiji/Preview Content\"";
+				DEVELOPMENT_TEAM = DRV33GLHHU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = bbjiji/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kiwi.bbjiji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +595,15 @@
 			buildConfigurations = (
 				9C4C9E3A2BEF13C500334BA6 /* Debug */,
 				9C4C9E3B2BEF13C500334BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C87FB2D2BEF63B50074D432 /* Build configuration list for PBXNativeTarget "bbjiji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C87FB2E2BEF63B50074D432 /* Debug */,
+				9C87FB2F2BEF63B50074D432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
