@@ -1,6 +1,7 @@
 import SwiftUI
 import CoreMotion
 import WatchConnectivity
+import WatchKit
 
 class MotionManager: ObservableObject {
     private var motionManager = CMMotionManager()
@@ -45,19 +46,32 @@ class MotionManager: ObservableObject {
     }
     
     private func detectMovement() {
+        // Apply smoothing
+        let smoothedRotationRateY = smooth(data: self.rotationRateY)
+        let smoothedGravityX = smooth(data: self.gravityX)
+        let smoothedGravityY = smooth(data: self.gravityY)
+        let smoothedGravityZ = smooth(data: self.gravityZ)
+        
+        // Calculate dynamic thresholds
+        let rotationThreshold = -0.5 * stdDev(data: smoothedRotationRateY)
+        let gravityXThreshold = 0.75 + 0.5 * stdDev(data: smoothedGravityX)
+        let gravityYThreshold = 0.0 + 0.5 * stdDev(data: smoothedGravityY)
+        let gravityZThreshold = -0.63 + 0.5 * stdDev(data: smoothedGravityZ)
+        
         // Detect troughs in rotationRateY
-        let troughsRotationY = detectTroughs(data: self.rotationRateY, threshold: -0.2)
+        let troughsRotationRateY = detectTroughs(data: smoothedRotationRateY, threshold: rotationThreshold)
         // Detect peaks in gravityX, gravityY, and gravityZ
-        let peaksGravityX = detectPeaks(data: self.gravityX, threshold: 0.75)
-        let peaksGravityY = detectPeaks(data: self.gravityY, threshold: 0.0)
-        let peaksGravityZ = detectPeaks(data: self.gravityZ, threshold: -0.63)
+        let peaksGravityX = detectPeaks(data: smoothedGravityX, threshold: gravityXThreshold)
+        let peaksGravityY = detectPeaks(data: smoothedGravityY, threshold: gravityYThreshold)
+        let peaksGravityZ = detectPeaks(data: smoothedGravityZ, threshold: gravityZThreshold)
         
         let currentTime = Date()
-        if troughsRotationY && peaksGravityX && peaksGravityY && peaksGravityZ {
+        if troughsRotationRateY && peaksGravityX && peaksGravityY && peaksGravityZ {
             if !self.movementDetected {
                 self.movementCount += 1
                 self.movementDetected = true
                 self.lastDetectedTime = currentTime
+                self.triggerHapticFeedback()
             }
         } else {
             if currentTime.timeIntervalSince(self.lastDetectedTime) > self.timeTolerance {
@@ -86,6 +100,30 @@ class MotionManager: ObservableObject {
             }
         }
         return false
+    }
+    
+    private func smooth(data: [Double], windowSize: Int = 5) -> [Double] {
+        guard data.count > windowSize else { return data }
+        
+        var smoothedData = [Double]()
+        for i in 0..<data.count {
+            let start = max(i - windowSize / 2, 0)
+            let end = min(i + windowSize / 2, data.count - 1)
+            let window = Array(data[start...end])
+            let average = window.reduce(0, +) / Double(window.count)
+            smoothedData.append(average)
+        }
+        return smoothedData
+    }
+    
+    private func stdDev(data: [Double]) -> Double {
+        let mean = data.reduce(0, +) / Double(data.count)
+        let variance = data.reduce(0) { $0 + pow($1 - mean, 2) } / Double(data.count)
+        return sqrt(variance)
+    }
+    
+    private func triggerHapticFeedback() {
+        WKInterfaceDevice.current().play(.success)
     }
     
     func resetCounter() {
